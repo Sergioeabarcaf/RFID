@@ -3,9 +3,8 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>pruebaRFID1</name>
+            <name>PruebaJDBC</name>
             <source-roots>
-                <root id="src.Octane_SDK_Java_1_26_0.dir"/>
                 <root id="src.dir"/>
             </source-roots>
             <test-roots>
