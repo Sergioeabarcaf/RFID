@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class ReadTagsPeriodicTrigger {
 
     public static void main(String[] args) {
-
+        
+        
         try {
             String hostname = System.getProperty(SampleProperties.hostname);
 
