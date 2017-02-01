@@ -50,7 +50,7 @@ public class RxSensitivityRamp {
                 reader.start();
 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     // ignore this since its just an example and just keep going
                 }
