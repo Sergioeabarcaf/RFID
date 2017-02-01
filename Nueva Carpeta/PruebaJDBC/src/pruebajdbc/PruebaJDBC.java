@@ -28,9 +28,9 @@ public class PruebaJDBC {
         
     public static void main(String[] args) {
 
-        String epc = "92782782";
-        Date date = new Date();
-        System.out.println(date);
+        String epc = "92782785454";
+        Date fecha = new Date();
+        System.out.println(fecha);
         int signal = 34;
         
         Connection conn = null;
@@ -46,12 +46,13 @@ public class PruebaJDBC {
             //STEP 4: Execute a query
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
-            String sql;
-            sql = "INSERT INTO etapa1 VALUES (54855454,'date',54)";
+            
+            String sql = "INSERT INTO etapa1 VALUES('"+epc+"','"+fecha+"','"+signal+"');";
             //stmt.setCursorName(epc); 
             //stmt.setString(2,date);
             //stmt.setString(3,signal);
-            stmt.execute(sql);
+            stmt.executeUpdate(sql);
+            //stmt.execute(sql);
 
             //STEP 6: Clean-up environment
             stmt.close();
