@@ -16,4 +16,8 @@ El proyecto utiliza la variable de entorno ```IMPINJ_READER_HOSTNAME``` para con
 
 ## Configurar credenciales y host mysql
 
-El proyecto utiliza Mysql como almacenamiento de lecturas de los tags, para permitir conexiones a un servidor externo se utiliza la variable de entorno ```MYSQL_HOST```, cuyo default es ```localhost```. Tambien es posible configurar el username con la variable ```MYSQL_USERNAME``` y la password con ```MYSQL_PASSWORD```, ambas son ```rfid``` por defecto.
+El proyecto utiliza Mysql como almacenamiento de lecturas de los tags, para permitir conexiones a un servidor externo se utiliza la variable de entorno ```MYSQL_HOST```, cuyo default es ```localhost```.
+
+Tambien es posible configurar el username con la variable ```MYSQL_USERNAME```y la password con ```MYSQL_PASSWORD```, ambas son ```rfid``` por defecto.
+
+Finalmente, la base de datos utilizada es manejada por la variable ```MYSQL_DATABASE```, cuyo default es ```rfid```.
