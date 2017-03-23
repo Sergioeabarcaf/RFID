@@ -18,7 +18,7 @@ import cl.proteinlab.rfid.service.TagService;
  * @since 21-03-17
  */
 @Component
-public class JPATagReportListener implements TagReportListener {
+public class JPATagLectureReportListener implements TagReportListener {
 
     @Autowired
     private TagService tagService;
