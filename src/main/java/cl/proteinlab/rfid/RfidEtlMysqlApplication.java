@@ -32,6 +32,7 @@ public class RfidEtlMysqlApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println(hostname);
         try {
             ImpinjReader reader = new ImpinjReader();
             System.out.println("Connecting");
