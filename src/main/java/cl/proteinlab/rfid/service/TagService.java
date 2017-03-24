@@ -1,5 +1,7 @@
 package cl.proteinlab.rfid.service;
 
+import java.util.List;
+
 import cl.proteinlab.rfid.domain.RfidTagLecture;
 
 /**
@@ -10,4 +12,5 @@ public interface TagService {
 
     RfidTagLecture guardar(RfidTagLecture tag);
 
+    List<RfidTagLecture> consultarTodas();
 }

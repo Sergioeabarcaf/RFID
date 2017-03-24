@@ -19,6 +19,7 @@ import com.impinj.octane.TagWriteOpResult;
 import com.impinj.octane.TargetTag;
 import com.impinj.octane.WordPointers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ import java.util.Random;
  * @since 23-03-17
  */
 @Component
+@Qualifier("tagWriterListener")
 public class TagWriterReportListener implements TagReportListener, TagOpCompleteListener {
 
     private static short EPC_OP_ID = 123;

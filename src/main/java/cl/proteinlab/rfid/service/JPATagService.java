@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cl.proteinlab.rfid.domain.RfidTagLecture;
 import cl.proteinlab.rfid.repository.RfidTagLectureRepository;
 
@@ -13,7 +16,7 @@ import cl.proteinlab.rfid.repository.RfidTagLectureRepository;
  * @since 21-03-17
  */
 @Service
-public class JpaTagService implements TagService {
+public class JPATagService implements TagService {
 
     @Autowired
     private RfidTagLectureRepository repository;
@@ -31,6 +34,18 @@ public class JpaTagService implements TagService {
             e.printStackTrace();
         }
         return save;
+    }
+
+    @Override
+    public List<RfidTagLecture> consultarTodas() {
+        List<RfidTagLecture> lecturas = new ArrayList<>();
+        try {
+            lecturas = repository.findAll();
+        } catch (Exception e) {
+            lecturas = new ArrayList<>();
+            e.printStackTrace();
+        }
+        return lecturas;
     }
 
 }

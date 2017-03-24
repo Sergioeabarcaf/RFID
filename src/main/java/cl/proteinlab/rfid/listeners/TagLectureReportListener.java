@@ -6,6 +6,7 @@ import com.impinj.octane.TagReport;
 import com.impinj.octane.TagReportListener;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,7 +19,8 @@ import cl.proteinlab.rfid.service.TagService;
  * @since 21-03-17
  */
 @Component
-public class JPATagLectureReportListener implements TagReportListener {
+@Qualifier("tagLectureListener")
+public class TagLectureReportListener implements TagReportListener {
 
     @Autowired
     private TagService tagService;
