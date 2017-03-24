@@ -11,7 +11,6 @@ import java.util.Map;
 
 import cl.proteinlab.rfid.service.ReaderService;
 
-import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
@@ -38,7 +37,7 @@ public class TagReaderController {
         return response;
     }
 
-    @RequestMapping(method = DELETE, path = "/start")
+    @RequestMapping(method = GET, path = "/stop")
     public Map<String, Object> stopReadingTags() {
         Map<String, Object> response = new HashMap<String, Object>();
 

@@ -1,4 +1,4 @@
-package cl.proteinlab.rfid;
+package cl.proteinlab.rfid.config;
 
 import com.impinj.octane.ImpinjReader;
 
