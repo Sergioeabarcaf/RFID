@@ -1,17 +1,18 @@
-version: '2'
-
-volumes:
-  mysql-data:
+version: '3.1'
 
 services:
   mysql:
     image: mysql:5.7
     volumes:
-      - "mysql-data:/var/lib/mysql"
+      - mysql_data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - 3306:3306
+    restart: always
     environment:
       MYSQL_DATABASE: rfid
       MYSQL_USER: rfid
       MYSQL_PASSWORD: rfid
-      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD: 'yes'
+
+volumes:
+  mysql_data:
